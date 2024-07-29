@@ -1,0 +1,151 @@
+﻿Software Requirements Specification (SRS) for Festavalive
+
+Name of student:Yadhukrishnan C
+Project name:Festalive
+Date:29/07/2024
+Batch name:Java Full Stack 178
+
+Abstract
+
+The Festavalive Website Project is designed to make buying tickets for concerts and other events simple and convenient. The website offers a user-friendly interface, allowing users book tickets for their favorite events.
+
+Admin Module
+The Admin Module is a crucial component of the Festavalive event ticket booking platform. It provides administrators with a comprehensive set of tools and functionalities to manage the platform effectively. This module ensures that the admin can oversee and control various aspects of the event booking process, including user management, event management, feedback monitoring, and overall platform maintenance.
+Admin Login
+    • Admin Login:
+        ◦ The admin can log in to the dashboard using a predefined email and password.
+Admin Dashboard
+    • Dashboard Overview:
+        ◦ The admin dashboard provides an overview of key metrics, including:
+            ▪ Users Count: The total number of registered users on the platform.
+            ▪ Events Count: The total number of events available on the platform.
+            ▪ Bookings Count: The total number of bookings made.
+            ▪ Earnings: The total earnings from all bookings.
+Event Management
+    • Add Event:
+        ◦ The admin can add available events with images and detailed descriptions.
+    • View Events:
+        ◦ The admin can view, edit, and delete events.
+User Management
+    • View Users:
+        ◦ The admin can view user records.
+Booking Management
+    • Bookings:
+        ◦ The admin can view booking history.
+Feedback Listing
+    • View Feedback:
+        ◦ The admin can view feedback submitted by users.
+Logout
+    • Logout:
+        ◦ The admin can log out from their dashboard.
+User Module
+The User Module of the Festavalive event ticket booking platform provides users with a seamless and interactive experience for browsing, booking, and managing their event preferences. This module includes functionalities for user registration and login, booking management, favorites, and user logout, ensuring a user-friendly interface for all essential activities.
+User Registration and Login
+    • User Registration:
+        ◦ Users can create a new account by providing their email, password, and other necessary details. The password is securely stored using password salting and hashing techniques to enhance security and protect user information.
+    • User Login:
+        ◦ Registered users can log in to their accounts by entering their email and password. The login process includes password verification using the stored salted and hashed password to ensure account security.
+    • Forgot Password:
+        ◦ Users can reset their password if they forget it by providing their registered email. Allowing them to create a new password securely.
+Booking Management
+    • View Available Events:
+        ◦ Users can browse through a list of available events, including concerts, sports games, and theater shows.
+    • View Event Details:
+        ◦ Users can select an event to view detailed information such as the event description, date, time, venue, and ticket price.
+    • Add to Favorites:
+        ◦ Users can add selected events to their favorites list for easy access and future reference.
+    • Proceed to Checkout:
+        ◦ Users can proceed to checkout and make payments securely using Razorpay. This ensures a smooth and secure transaction process for booking event tickets.
+    • View Previous Bookings:
+        ◦ Users can access and review their booking history to keep track of past events they have attended.
+Favorites
+    • Manage Favorites:
+        ◦ Users can add events to their favorites list, enabling them to quickly find and book their preferred events at any time.
+Logout
+    • User Logout:
+        ◦ Users can securely log out from the platform, ensuring their account details and personal information remain protected.
+Database and Tables
+Database : javadb_168
+Driver : com.mysql.jdbc.Driver
+Username : javadb_168
+Password : Sp3cJa5A2k24
+Connection URL : jdbc:mysql://192.168.18.245:3306/", "javadb_168", "Sp3cJa5A2k24”
+
+Tables
+
+1. festalive_user
+
+CREATE TABLE `festalive_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+2.  concerts
+
+
+CREATE TABLE `concerts` (
+  `concert_id` int(11) NOT NULL AUTO_INCREMENT,
+  `concert_name` varchar(255) NOT NULL,
+  `concert_date` date NOT NULL,
+  `concert_time` time NOT NULL,
+  `venue` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `spec` text,
+  `ticket_price` int(11) NOT NULL,
+  `image_url` varchar(500) NOT NULL,
+  PRIMARY KEY (`concert_id`)
+);
+
+3.  favss
+
+
+
+
+
+Screenshots
+
+index.html
+
+
+
+
+
+
+
+
+
+
+
+login.jsp
+
+
+register.jsp
+
+
+adminwelcome.jsp
+
+
+addevent.jsp
+
+viewevent.jsp
+viewusers.jsp
+adminviewbookings.jsp
+
+contact.jsp
+
+userwelcome.jsp
+
+concertdetails.jsp
+viewfav.jsp
+
+sucess.jsp
+
+userbookings.jsp
+
+usercontact.jsp
+
+about.jsp
+
+
